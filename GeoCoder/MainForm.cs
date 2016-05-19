@@ -331,7 +331,7 @@ namespace MultiGeoCoder
                 // Save file in the selected format.
                 if(saveFileDialog.FilterIndex == 2)
                 {
-                    excelApp._workBook.SaveAs(SaveAsTextBox.Text, Excel.XlFileFormat.xlExcel12);
+                    excelApp._workBook.SaveAs(SaveAsTextBox.Text, Excel.XlFileFormat.xlOpenXMLWorkbook);
                 }
                 else
                 {

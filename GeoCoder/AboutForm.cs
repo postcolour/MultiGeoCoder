@@ -18,7 +18,7 @@ namespace MultiGeoCoder
             this.labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelHomePage.Text = "Home Page: ";
-            this.linkLabel.Text = "www.github.com";
+            this.linkLabel.Text = "www.github.com/postcolour/multigeocoder.git";
             this.textBoxDescription.Text = AssemblyDescription;
         }
 
@@ -96,7 +96,7 @@ namespace MultiGeoCoder
             this.linkLabel.LinkVisited = true;
 
             // Navigate to a URL.
-            System.Diagnostics.Process.Start("https://www.github.com");
+            System.Diagnostics.Process.Start("https://www.github.com/postcolour/multigeocoder.git");
         }
 
     }

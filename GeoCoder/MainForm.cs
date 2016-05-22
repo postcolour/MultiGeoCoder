@@ -135,7 +135,6 @@ namespace MultiGeoCoder
             EnableRunTxtBox();
         }
 
-
         /// <summary>
         /// Exit button procedure
         /// </summary>
@@ -145,7 +144,6 @@ namespace MultiGeoCoder
         {
             this.Close();
         }
-
 
         /// <summary>
         /// Occurs when the "Run" button is clicked
@@ -162,7 +160,6 @@ namespace MultiGeoCoder
             backgroundWorker.RunWorkerAsync();
         }
 
-
         /// <summary>
         /// Enable or Disable all controls
         /// </summary>
@@ -178,7 +175,6 @@ namespace MultiGeoCoder
                     {
                         foreach(ToolStripItem e in item.DropDownItems)
                             e.Enabled = b;
-
                         item.Enabled = b;
                     }
                 }

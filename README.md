@@ -20,4 +20,4 @@ It allowes you to determine the coordinates and get information about the geogra
 2. Select saving addresses fields.
 3. Select path to save result Excel file.
 
-PS And wait for end of process.
+PS Push Run button and wait for end of process.

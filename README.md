@@ -11,3 +11,13 @@ It allowes you to determine the coordinates and get information about the geogra
  * Windows XP (or above)
  * .NET Framework 4.0
  * Microsoft Excel 2007 (or above)
+ 
+# Example Usage:
+
+![Screenshot01](https://github.com/postcolour/MultiGeoCoder/blob/master/docs/screenshot_01.jpg)
+
+1. Add your addresses by copy and paste or just raw typing
+2. Select saving addresses fields.
+3. Select path to save result Excel file.
+
+PS And wait for end of process.

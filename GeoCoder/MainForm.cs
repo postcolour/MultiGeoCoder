@@ -255,12 +255,14 @@ namespace MultiGeoCoder
                     // If checked, insert that into head cell of column in the excel worksheet
                     if(Convert.ToBoolean(addrRow.Cells[AddressMemberCheck.Name].Value) == true)
                     {
+                        excelApp._workSheet.Cells[1, i + 1].NumberFormat = "@";
                         excelApp._workSheet.Cells[1, i + 1] = addrRow.Cells[AddressMember.Name].Value.ToString();
                         i++;
                     }
                 }
                 string[] sAddressMember = new string[i];
                 int d = 0;
+
                 foreach(DataGridViewRow addrRow in AddressMembersDataGridView.Rows)
                 {
                     if(Convert.ToBoolean(addrRow.Cells[AddressMemberCheck.Name].Value) == true)
@@ -306,6 +308,7 @@ namespace MultiGeoCoder
                             {
                                 if(sAddressMember[g] == sElement[f])
                                 {
+                                    excelApp._workSheet.Cells[a + 1, g + 1].NumberFormat = "@";
                                     excelApp._workSheet.Cells[a + 1, g + 1] = sElementValue[f];
                                 }
                             }

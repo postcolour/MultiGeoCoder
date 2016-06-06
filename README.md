@@ -21,3 +21,9 @@ It allowes you to determine the coordinates and get information about the geogra
 3. Select path to save result Excel file.
 
 PS Push Run button and wait for end of process.
+
+# Downloads:
+
+Prebuild binaries of MultiGeoCoder can be found on the [release](https://github.com/postcolour/MultiGeoCoder/releases) page.
+
+ * Platform: Windows x86/x86_64

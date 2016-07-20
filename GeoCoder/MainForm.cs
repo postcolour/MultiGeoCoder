@@ -68,13 +68,13 @@ namespace MultiGeoCoder
         {
             if(dataGrid.Rows.Count > 1)
             {
-                if(dataGrid.CurrentRow.IsNewRow == true)
+                foreach(DataGridViewRow row in dataGrid.SelectedRows)
                 {
-                    // do nothing
-                }
-                else
-                {
-                    foreach(DataGridViewRow row in dataGrid.SelectedRows)
+                    if(row.IsNewRow == true)
+                    {
+                        // do nothing
+                    }
+                    else
                     {
                         dataGrid.Rows.RemoveAt(row.Index);
                     }

@@ -12,13 +12,14 @@ namespace MultiGeoCoder
         /// <summary>
         /// Method to return response from web request
         /// </summary>
-        public void WebRequestGet(ref string sAddr)
+        public void WebRequestGet(ref string sAddr, ref string sLoc)
         {
             try
             {
                 // Create a request for the URL.
                 WebRequest request = WebRequest.Create("https://geocode-maps.yandex.ru/1.x/?results=1&geocode=" +
-                                                                      HttpUtility.UrlEncode(sAddr));
+                                                                      HttpUtility.UrlEncode(sAddr) + "&lang=" + 
+                                                                      HttpUtility.UrlEncode(sLoc));
                 // If required by the server, set the credentials.
                 request.Credentials = CredentialCache.DefaultCredentials;
 

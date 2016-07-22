@@ -54,6 +54,8 @@ namespace MultiGeoCoder
             this.ChildSplitContainer = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.LocalLabel = new System.Windows.Forms.Label();
+            this.LocalComboBox = new System.Windows.Forms.ComboBox();
             this.WorkProgressBar = new System.Windows.Forms.ProgressBar();
             this.AboutButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,9 +79,9 @@ namespace MultiGeoCoder
             // ExitButton
             // 
             this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitButton.Location = new System.Drawing.Point(450, 43);
+            this.ExitButton.Location = new System.Drawing.Point(461, 45);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(88, 20);
+            this.ExitButton.Size = new System.Drawing.Size(40, 20);
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -96,7 +98,7 @@ namespace MultiGeoCoder
             this.dataGrid.Location = new System.Drawing.Point(3, 16);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGrid.Size = new System.Drawing.Size(535, 232);
+            this.dataGrid.Size = new System.Drawing.Size(498, 255);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_CellMouseClick);
             this.dataGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGrid_KeyDown);
@@ -116,33 +118,33 @@ namespace MultiGeoCoder
             this.PasteToolStripMenuItem,
             this.DeleteToolStripMenuItem});
             this.DataGridContextMenu.Name = "DataGridContextMenu";
-            this.DataGridContextMenu.Size = new System.Drawing.Size(153, 114);
+            this.DataGridContextMenu.Size = new System.Drawing.Size(108, 92);
             // 
             // CopyToolStripMenuItem
             // 
             this.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem";
-            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.CopyToolStripMenuItem.Text = "Copy";
             this.CopyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
             // 
             // CutToolStripMenuItem
             // 
             this.CutToolStripMenuItem.Name = "CutToolStripMenuItem";
-            this.CutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.CutToolStripMenuItem.Text = "Cut";
             this.CutToolStripMenuItem.Click += new System.EventHandler(this.CutToolStripMenuItem_Click);
             // 
             // PasteToolStripMenuItem
             // 
             this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
-            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.PasteToolStripMenuItem.Text = "Paste";
             this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
             // 
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
@@ -162,14 +164,14 @@ namespace MultiGeoCoder
             this.SaveAsTextBox.Location = new System.Drawing.Point(3, 16);
             this.SaveAsTextBox.Name = "SaveAsTextBox";
             this.SaveAsTextBox.ReadOnly = true;
-            this.SaveAsTextBox.Size = new System.Drawing.Size(504, 20);
+            this.SaveAsTextBox.Size = new System.Drawing.Size(467, 20);
             this.SaveAsTextBox.TabIndex = 7;
             this.SaveAsTextBox.TextChanged += new System.EventHandler(this.SaveAsTextBox_TextChanged);
             // 
             // SaveAsPathButton
             // 
             this.SaveAsPathButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SaveAsPathButton.Location = new System.Drawing.Point(513, 16);
+            this.SaveAsPathButton.Location = new System.Drawing.Point(476, 16);
             this.SaveAsPathButton.Name = "SaveAsPathButton";
             this.SaveAsPathButton.Size = new System.Drawing.Size(25, 20);
             this.SaveAsPathButton.TabIndex = 8;
@@ -194,9 +196,9 @@ namespace MultiGeoCoder
             // RunButton
             // 
             this.RunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RunButton.Location = new System.Drawing.Point(356, 43);
+            this.RunButton.Location = new System.Drawing.Point(415, 45);
             this.RunButton.Name = "RunButton";
-            this.RunButton.Size = new System.Drawing.Size(88, 20);
+            this.RunButton.Size = new System.Drawing.Size(40, 20);
             this.RunButton.TabIndex = 10;
             this.RunButton.Text = "Run";
             this.RunButton.UseVisualStyleBackColor = true;
@@ -231,7 +233,7 @@ namespace MultiGeoCoder
             this.AddressMembersDataGridView.RowHeadersVisible = false;
             this.AddressMembersDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.AddressMembersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AddressMembersDataGridView.Size = new System.Drawing.Size(535, 238);
+            this.AddressMembersDataGridView.Size = new System.Drawing.Size(498, 261);
             this.AddressMembersDataGridView.TabIndex = 12;
             // 
             // AddressMemberCheck
@@ -267,13 +269,15 @@ namespace MultiGeoCoder
             // 
             // MainSplitContainer.Panel2
             // 
+            this.MainSplitContainer.Panel2.Controls.Add(this.LocalLabel);
+            this.MainSplitContainer.Panel2.Controls.Add(this.LocalComboBox);
             this.MainSplitContainer.Panel2.Controls.Add(this.WorkProgressBar);
             this.MainSplitContainer.Panel2.Controls.Add(this.AboutButton);
             this.MainSplitContainer.Panel2.Controls.Add(this.tableLayoutPanel4);
             this.MainSplitContainer.Panel2.Controls.Add(this.ExitButton);
             this.MainSplitContainer.Panel2.Controls.Add(this.RunButton);
-            this.MainSplitContainer.Size = new System.Drawing.Size(541, 582);
-            this.MainSplitContainer.SplitterDistance = 512;
+            this.MainSplitContainer.Size = new System.Drawing.Size(504, 639);
+            this.MainSplitContainer.SplitterDistance = 558;
             this.MainSplitContainer.TabIndex = 14;
             // 
             // ChildSplitContainer
@@ -290,8 +294,8 @@ namespace MultiGeoCoder
             // ChildSplitContainer.Panel2
             // 
             this.ChildSplitContainer.Panel2.Controls.Add(this.tableLayoutPanel3);
-            this.ChildSplitContainer.Size = new System.Drawing.Size(541, 512);
-            this.ChildSplitContainer.SplitterDistance = 251;
+            this.ChildSplitContainer.Size = new System.Drawing.Size(504, 558);
+            this.ChildSplitContainer.SplitterDistance = 274;
             this.ChildSplitContainer.TabIndex = 14;
             // 
             // tableLayoutPanel2
@@ -306,7 +310,7 @@ namespace MultiGeoCoder
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(541, 251);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(504, 274);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -321,22 +325,42 @@ namespace MultiGeoCoder
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(541, 257);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(504, 280);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // LocalLabel
+            // 
+            this.LocalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LocalLabel.AutoSize = true;
+            this.LocalLabel.Location = new System.Drawing.Point(285, 49);
+            this.LocalLabel.Name = "LocalLabel";
+            this.LocalLabel.Size = new System.Drawing.Size(58, 13);
+            this.LocalLabel.TabIndex = 20;
+            this.LocalLabel.Text = "Language:";
+            // 
+            // LocalComboBox
+            // 
+            this.LocalComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LocalComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LocalComboBox.FormattingEnabled = true;
+            this.LocalComboBox.Location = new System.Drawing.Point(349, 44);
+            this.LocalComboBox.Name = "LocalComboBox";
+            this.LocalComboBox.Size = new System.Drawing.Size(60, 21);
+            this.LocalComboBox.TabIndex = 19;
             // 
             // WorkProgressBar
             // 
             this.WorkProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.WorkProgressBar.Location = new System.Drawing.Point(29, 40);
+            this.WorkProgressBar.Location = new System.Drawing.Point(29, 44);
             this.WorkProgressBar.Name = "WorkProgressBar";
-            this.WorkProgressBar.Size = new System.Drawing.Size(321, 23);
+            this.WorkProgressBar.Size = new System.Drawing.Size(250, 20);
             this.WorkProgressBar.TabIndex = 18;
             // 
             // AboutButton
             // 
-            this.AboutButton.Location = new System.Drawing.Point(3, 43);
+            this.AboutButton.Location = new System.Drawing.Point(3, 45);
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Size = new System.Drawing.Size(20, 20);
             this.AboutButton.TabIndex = 17;
@@ -358,7 +382,7 @@ namespace MultiGeoCoder
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(541, 39);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(504, 39);
             this.tableLayoutPanel4.TabIndex = 15;
             // 
             // backgroundWorker
@@ -373,7 +397,7 @@ namespace MultiGeoCoder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 582);
+            this.ClientSize = new System.Drawing.Size(504, 639);
             this.Controls.Add(this.MainSplitContainer);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.KeyPreview = true;
@@ -386,6 +410,7 @@ namespace MultiGeoCoder
             ((System.ComponentModel.ISupportInitialize)(this.AddressMembersDataGridView)).EndInit();
             this.MainSplitContainer.Panel1.ResumeLayout(false);
             this.MainSplitContainer.Panel2.ResumeLayout(false);
+            this.MainSplitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitContainer)).EndInit();
             this.MainSplitContainer.ResumeLayout(false);
             this.ChildSplitContainer.Panel1.ResumeLayout(false);
@@ -430,6 +455,8 @@ namespace MultiGeoCoder
         private Button AboutButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private ProgressBar WorkProgressBar;
+        private Label LocalLabel;
+        private ComboBox LocalComboBox;
     }
 }
 

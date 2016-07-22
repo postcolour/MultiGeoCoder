@@ -9,6 +9,9 @@ namespace MultiGeoCoder
 {
     public partial class MainForm : Form
     {
+
+        private string sLoc; 
+
         /// <summary>
         /// Main procedure
         /// </summary>
@@ -127,6 +130,11 @@ namespace MultiGeoCoder
                 row.Cells[AddressMemberCheck.Name].Value = true;
                 row.Cells[AddressMemberCheck.Name].ToolTipText = "Add field in results";
             }
+
+            // LocalComboBox fill with values
+            string[] sLocal = { "ru_RU", "en_US", "uk_UA", "be_BY", "tr_TR"};
+            LocalComboBox.Items.AddRange(sLocal);
+            LocalComboBox.SelectedIndex = 0;
             EnableRunTxtBox();
         }
 
@@ -147,6 +155,7 @@ namespace MultiGeoCoder
         /// <param name="e"></param>
         private void RunButton_Click(object sender, EventArgs e)
         {
+            sLoc = LocalComboBox.SelectedItem.ToString();
             // Set the maximum value of ProgressBar
             WorkProgressBar.Maximum = dataGrid.Rows.Count;
             // Disable all controls on form
@@ -280,7 +289,7 @@ namespace MultiGeoCoder
                     {
                         sAddress = row.Cells[AddressName.Name].Value.ToString();
                         URLRequest req = new URLRequest();
-                        req.WebRequestGet(ref sAddress);
+                        req.WebRequestGet(ref sAddress, ref sLoc);
                         XDocument xmlAddr = XDocument.Parse(sAddress);
 
                         // Itteration on each element of address members collection

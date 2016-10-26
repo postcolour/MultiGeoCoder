@@ -60,6 +60,7 @@ namespace MultiGeoCoder
             this.AboutButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.StopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.DataGridContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddressMembersDataGridView)).BeginInit();
@@ -79,7 +80,7 @@ namespace MultiGeoCoder
             // ExitButton
             // 
             this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitButton.Location = new System.Drawing.Point(461, 45);
+            this.ExitButton.Location = new System.Drawing.Point(390, 45);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(40, 20);
             this.ExitButton.TabIndex = 2;
@@ -98,7 +99,7 @@ namespace MultiGeoCoder
             this.dataGrid.Location = new System.Drawing.Point(3, 16);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGrid.Size = new System.Drawing.Size(498, 255);
+            this.dataGrid.Size = new System.Drawing.Size(427, 199);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_CellMouseClick);
             this.dataGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGrid_KeyDown);
@@ -164,14 +165,14 @@ namespace MultiGeoCoder
             this.SaveAsTextBox.Location = new System.Drawing.Point(3, 16);
             this.SaveAsTextBox.Name = "SaveAsTextBox";
             this.SaveAsTextBox.ReadOnly = true;
-            this.SaveAsTextBox.Size = new System.Drawing.Size(467, 20);
+            this.SaveAsTextBox.Size = new System.Drawing.Size(396, 20);
             this.SaveAsTextBox.TabIndex = 7;
             this.SaveAsTextBox.TextChanged += new System.EventHandler(this.SaveAsTextBox_TextChanged);
             // 
             // SaveAsPathButton
             // 
             this.SaveAsPathButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SaveAsPathButton.Location = new System.Drawing.Point(476, 16);
+            this.SaveAsPathButton.Location = new System.Drawing.Point(405, 16);
             this.SaveAsPathButton.Name = "SaveAsPathButton";
             this.SaveAsPathButton.Size = new System.Drawing.Size(25, 20);
             this.SaveAsPathButton.TabIndex = 8;
@@ -196,7 +197,7 @@ namespace MultiGeoCoder
             // RunButton
             // 
             this.RunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RunButton.Location = new System.Drawing.Point(415, 45);
+            this.RunButton.Location = new System.Drawing.Point(298, 45);
             this.RunButton.Name = "RunButton";
             this.RunButton.Size = new System.Drawing.Size(40, 20);
             this.RunButton.TabIndex = 10;
@@ -233,7 +234,7 @@ namespace MultiGeoCoder
             this.AddressMembersDataGridView.RowHeadersVisible = false;
             this.AddressMembersDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.AddressMembersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AddressMembersDataGridView.Size = new System.Drawing.Size(498, 261);
+            this.AddressMembersDataGridView.Size = new System.Drawing.Size(427, 206);
             this.AddressMembersDataGridView.TabIndex = 12;
             // 
             // AddressMemberCheck
@@ -276,8 +277,8 @@ namespace MultiGeoCoder
             this.MainSplitContainer.Panel2.Controls.Add(this.tableLayoutPanel4);
             this.MainSplitContainer.Panel2.Controls.Add(this.ExitButton);
             this.MainSplitContainer.Panel2.Controls.Add(this.RunButton);
-            this.MainSplitContainer.Size = new System.Drawing.Size(504, 639);
-            this.MainSplitContainer.SplitterDistance = 558;
+            this.MainSplitContainer.Size = new System.Drawing.Size(433, 528);
+            this.MainSplitContainer.SplitterDistance = 447;
             this.MainSplitContainer.TabIndex = 14;
             // 
             // ChildSplitContainer
@@ -294,8 +295,8 @@ namespace MultiGeoCoder
             // ChildSplitContainer.Panel2
             // 
             this.ChildSplitContainer.Panel2.Controls.Add(this.tableLayoutPanel3);
-            this.ChildSplitContainer.Size = new System.Drawing.Size(504, 558);
-            this.ChildSplitContainer.SplitterDistance = 274;
+            this.ChildSplitContainer.Size = new System.Drawing.Size(433, 447);
+            this.ChildSplitContainer.SplitterDistance = 218;
             this.ChildSplitContainer.TabIndex = 14;
             // 
             // tableLayoutPanel2
@@ -310,7 +311,7 @@ namespace MultiGeoCoder
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(504, 274);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(433, 218);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -325,14 +326,14 @@ namespace MultiGeoCoder
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(504, 280);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(433, 225);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // LocalLabel
             // 
             this.LocalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LocalLabel.AutoSize = true;
-            this.LocalLabel.Location = new System.Drawing.Point(285, 49);
+            this.LocalLabel.Location = new System.Drawing.Point(168, 49);
             this.LocalLabel.Name = "LocalLabel";
             this.LocalLabel.Size = new System.Drawing.Size(58, 13);
             this.LocalLabel.TabIndex = 20;
@@ -343,7 +344,7 @@ namespace MultiGeoCoder
             this.LocalComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LocalComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocalComboBox.FormattingEnabled = true;
-            this.LocalComboBox.Location = new System.Drawing.Point(349, 44);
+            this.LocalComboBox.Location = new System.Drawing.Point(232, 44);
             this.LocalComboBox.Name = "LocalComboBox";
             this.LocalComboBox.Size = new System.Drawing.Size(60, 21);
             this.LocalComboBox.TabIndex = 19;
@@ -355,7 +356,7 @@ namespace MultiGeoCoder
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WorkProgressBar.Location = new System.Drawing.Point(29, 44);
             this.WorkProgressBar.Name = "WorkProgressBar";
-            this.WorkProgressBar.Size = new System.Drawing.Size(250, 20);
+            this.WorkProgressBar.Size = new System.Drawing.Size(133, 20);
             this.WorkProgressBar.TabIndex = 18;
             // 
             // AboutButton
@@ -382,7 +383,7 @@ namespace MultiGeoCoder
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(504, 39);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(433, 39);
             this.tableLayoutPanel4.TabIndex = 15;
             // 
             // backgroundWorker
@@ -393,11 +394,23 @@ namespace MultiGeoCoder
             this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
             this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
+            // StopButton
+            // 
+            this.StopButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.StopButton.Location = new System.Drawing.Point(344, 496);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(40, 20);
+            this.StopButton.TabIndex = 21;
+            this.StopButton.Text = "Stop";
+            this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 639);
+            this.ClientSize = new System.Drawing.Size(433, 528);
+            this.Controls.Add(this.StopButton);
             this.Controls.Add(this.MainSplitContainer);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.KeyPreview = true;
@@ -457,6 +470,7 @@ namespace MultiGeoCoder
         private ProgressBar WorkProgressBar;
         private Label LocalLabel;
         private ComboBox LocalComboBox;
+        private Button StopButton;
     }
 }
 

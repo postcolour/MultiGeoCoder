@@ -160,6 +160,7 @@ namespace MultiGeoCoder
             WorkProgressBar.Maximum = dataGrid.Rows.Count;
             // Disable all controls on form
             enableControls(this.Controls, false);
+            StopButton.Enabled = true;
             // Run new thread
             backgroundWorker.RunWorkerAsync();
         }
@@ -330,6 +331,12 @@ namespace MultiGeoCoder
                         backgroundWorker.ReportProgress(a);
                         a++;
                     }
+                    // Breaking operation on Button Stop occured
+                    if(backgroundWorker.CancellationPending == true)
+                    {
+                        e.Cancel = true;
+                        break;
+                    }
                 }
                 // Save file in the selected format.
                 if(saveFileDialog.FilterIndex == 2)
@@ -475,6 +482,20 @@ namespace MultiGeoCoder
             if(dataObj != null)
             {
                 Clipboard.SetDataObject(dataObj);
+            }
+        }
+
+        /// <summary>
+        /// Occurs when Stop button clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            // Need for stopping background process
+            if(backgroundWorker.WorkerSupportsCancellation == true)
+            {
+                backgroundWorker.CancelAsync();
             }
         }
     }

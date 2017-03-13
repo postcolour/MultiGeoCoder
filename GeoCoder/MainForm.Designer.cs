@@ -48,8 +48,6 @@ namespace MultiGeoCoder
             this.RunButton = new System.Windows.Forms.Button();
             this.AddressFieldsLabel = new System.Windows.Forms.Label();
             this.AddressMembersDataGridView = new System.Windows.Forms.DataGridView();
-            this.AddressMemberCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.AddressMember = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.ChildSplitContainer = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -61,6 +59,8 @@ namespace MultiGeoCoder
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.StopButton = new System.Windows.Forms.Button();
+            this.AddressMemberCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AddressMember = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.DataGridContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddressMembersDataGridView)).BeginInit();
@@ -237,24 +237,6 @@ namespace MultiGeoCoder
             this.AddressMembersDataGridView.Size = new System.Drawing.Size(427, 206);
             this.AddressMembersDataGridView.TabIndex = 12;
             // 
-            // AddressMemberCheck
-            // 
-            this.AddressMemberCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.AddressMemberCheck.HeaderText = "AddressMemberCheck";
-            this.AddressMemberCheck.Name = "AddressMemberCheck";
-            this.AddressMemberCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.AddressMemberCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.AddressMemberCheck.Width = 5;
-            // 
-            // AddressMember
-            // 
-            this.AddressMember.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.AddressMember.ContextMenuStrip = this.DataGridContextMenu;
-            this.AddressMember.HeaderText = "AddressMember";
-            this.AddressMember.Name = "AddressMember";
-            this.AddressMember.ReadOnly = true;
-            this.AddressMember.Width = 5;
-            // 
             // MainSplitContainer
             // 
             this.MainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -405,6 +387,23 @@ namespace MultiGeoCoder
             this.StopButton.UseVisualStyleBackColor = true;
             this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
+            // AddressMemberCheck
+            // 
+            this.AddressMemberCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.AddressMemberCheck.HeaderText = "AddressMemberCheck";
+            this.AddressMemberCheck.Name = "AddressMemberCheck";
+            this.AddressMemberCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.AddressMemberCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.AddressMemberCheck.Width = 5;
+            // 
+            // AddressMember
+            // 
+            this.AddressMember.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.AddressMember.HeaderText = "AddressMember";
+            this.AddressMember.Name = "AddressMember";
+            this.AddressMember.ReadOnly = true;
+            this.AddressMember.Width = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,8 +457,6 @@ namespace MultiGeoCoder
         private Button RunButton;
         private Label AddressFieldsLabel;
         private DataGridView AddressMembersDataGridView;
-        private DataGridViewCheckBoxColumn AddressMemberCheck;
-        private DataGridViewTextBoxColumn AddressMember;
         private SplitContainer MainSplitContainer;
         private SplitContainer ChildSplitContainer;
         private TableLayoutPanel tableLayoutPanel2;
@@ -471,6 +468,8 @@ namespace MultiGeoCoder
         private Label LocalLabel;
         private ComboBox LocalComboBox;
         private Button StopButton;
+        private DataGridViewCheckBoxColumn AddressMemberCheck;
+        private DataGridViewTextBoxColumn AddressMember;
     }
 }
 
